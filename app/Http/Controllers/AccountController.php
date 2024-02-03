@@ -9,9 +9,9 @@ class AccountController extends Controller
     //Want to return the login and signup views
 
     public function registration(){
-        return view("");
+        return view('account.registration');
     }
     public function login(){
-        return view("");
+        return view('account.login');
     }
 }
