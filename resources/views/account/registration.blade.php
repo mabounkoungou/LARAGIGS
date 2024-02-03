@@ -43,9 +43,18 @@
 @endsection
 @section('customJs')
 <script>
-    $(#registrationForm).submit(function(e)){
+    $("#registrationForm").submit(function(e){
         e.preventDefault();
-    }
+        $_ajax({
+            url:'{{ route("account.processregistration") }}',
+            type:'post',
+            data:$("#registrationForm").serializeArray(),
+            dataType:'json',
+            success: function (response){
+
+            }
+    });
+    });
 </script>
 
 @endsection
