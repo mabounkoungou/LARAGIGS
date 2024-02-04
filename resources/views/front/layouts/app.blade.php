@@ -6,17 +6,35 @@
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no" />
 	<meta name="HandheldFriendly" content="True" />
+	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta name="pinterest" content="nopin" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}" />
 	<!-- Fav Icon -->
 	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<style>
+		.btn.btn-outline-primary.me-2 {
+    border-radius: 30px 0 30px 0;
+}
+.btn.btn-primary{
+	border-radius: 0 30px 0 30px;
+}
+.btn.btn-primary.mt-2 {
+    border-radius: 30px 0 30px 0;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+	</style>
 </head>
 <body data-instant-intensity="mousedown">
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">CareerVibe</a>
+			<a class="navbar-brand" href="index.html">LARA-GIGS</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -29,7 +47,7 @@
 						<a class="nav-link" aria-current="page" href="jobs.html">Find Jobs</a>
 					</li>										
 				</ul>				
-				<a class="btn btn-outline-primary me-2" href="login.html" type="submit">Login</a>
+				<a class="btn btn-outline-primary me-2" href="{{route("account.login")}}" type="submit">Login</a>
 				<a class="btn btn-primary" href="post-job.html" type="submit">Post a Job</a>
 			</div>
 		</div>
@@ -75,5 +93,14 @@
 <script src="{{ asset('assets/js/lazyload.17.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 
+<script>
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+</script>
+
+@yield('customJs')
 </body>
 </html>
