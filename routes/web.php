@@ -36,7 +36,7 @@ Route::group(['account'], function(){
     //Authenticated Route
 
 Route::get("/account/profile",[AccountController::class,"profile"])->name("account.profile");
-Route::get("/account/updateprofile",[AccountController::class,"updateprofile"])->name("account.updateprofile");
+Route::put("/account/updateprofile",[AccountController::class,"updateprofile"])->name("account.updateprofile");
 Route::get("/account/logout",[AccountController::class,"logout"])->name("account.logout");
         
     });
