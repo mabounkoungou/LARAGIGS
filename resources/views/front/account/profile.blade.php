@@ -24,18 +24,22 @@
                         <div class="mb-4">
                             <label for="" class="mb-2">Name*</label>
                             <input type="text" name="name" id="name" placeholder="Enter Name" class="form-control" value="{{$user->name}}">
+                            <p></p>
                         </div>
                         <div class="mb-4">
                             <label for="" class="mb-2">Email*</label>
                             <input type="text" name="email" id="email" placeholder="Enter Email" class="form-control" value="{{$user->email}}">
+                            <p></p>
                         </div>
                         <div class="mb-4">
-                            <label for="" class="mb-2">Designation*</label>
+                            <label for="" class="mb-2">Designation</label>
                             <input type="text" name="designation" id="designation" placeholder="Designation" class="form-control" value="{{$user->designation}}">
+                            <p></p>
                         </div>
                         <div class="mb-4">
-                            <label for="" class="mb-2">Mobile*</label>
+                            <label for="" class="mb-2">Mobile</label>
                             <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form-control" value="{{$user->mobile}}">
+                            <p></p>
                         </div>                        
                     </div>
                     <div class="card-footer  p-4">
@@ -78,11 +82,40 @@ $("#userForm").submit(function(e){
 
     $.ajax({
 
-        url: '',
+        url: '{{ route("account.updateprofile")}}',
         type: 'put',
         dataType: 'json',
         data: $("#userForm").serializeArray();
         success: function(response){
+            if (response.status == true) {
+
+            }
+            else{
+                var errors = response.errors;
+                if (errors.name) {
+                    $("#name").addClass('is-invalid')
+                        .siblings('p')
+                        .addClass('invalid-feedback')
+                        .html(errors.name)
+                } else{
+                    $("#name").removeClass('is-invalid')
+                        .siblings('p')
+                        .removeClass('invalid-feedback')
+                        .html('')
+                }
+
+                if (errors.email) {
+                    $("#email").addClass('is-invalid')
+                        .siblings('p')
+                        .addClass('invalid-feedback')
+                        .html(errors.email)
+                } else{
+                    $("#email").removeClass('is-invalid')
+                        .siblings('p')
+                        .removeClass('invalid-feedback')
+                        .html('')
+                }
+            }
             
         }
     });

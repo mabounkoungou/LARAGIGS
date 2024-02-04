@@ -80,12 +80,38 @@ class AccountController extends Controller
         ]);
     }
 
-    public function uodateprofile(Request $request){
+    public function updateprofile(Request $request){
+        $id = Auth::user()->id;
     
         $validator = Validator::make($request->all(),[
             'name' => 'required|min:5|max:25',
-            
+            'email'=> 'required|email|unique:users,email,'.$id.',id'
+
         ]);
+        
+        if ($validator->passes()){
+            $user = user::find($id);
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->mobile = $request->mobile;
+            $user->designation = $request->designation;
+            $user->save();
+
+            session()->flash('success','profile updated succesfully');
+
+            return response()->json([
+                'status' => true,
+                'errors' => []
+            ]);
+        }
+        
+        else{
+            return response()->json([
+                'status' => false,
+                'errors' => $validator->errors()
+            ]);
+        }
+
     
     }
 
