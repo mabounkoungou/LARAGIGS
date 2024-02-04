@@ -80,6 +80,15 @@ class AccountController extends Controller
         ]);
     }
 
+    public function uodateprofile(Request $request){
+    
+        $validator = Validator::make($request->all(),[
+            'name' => 'required|min:5|max:25',
+            
+        ]);
+    
+    }
+
     public function logout(){
         Auth::logout();
         return redirect()->route('account.login');

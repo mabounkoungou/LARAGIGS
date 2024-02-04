@@ -18,6 +18,7 @@
             </div>
             <div class="col-lg-9">
                 <div class="card border-0 shadow mb-4">
+                    <form action="" method="post" id="userForm" name="userForm">
                     <div class="card-body  p-4">
                         <h3 class="fs-4 mb-1">My Profile</h3>
                         <div class="mb-4">
@@ -38,8 +39,9 @@
                         </div>                        
                     </div>
                     <div class="card-footer  p-4">
-                        <button type="button" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
+                </form>
                 </div>
 
                 <div class="card border-0 shadow mb-4">
@@ -66,4 +68,32 @@
         </div>
     </div>
 </section>
+@endsection
+
+@section('customJs')
+<script type="text/javascript">
+$("#userForm").submit(function(e){
+    e.preventDefault();
+
+
+    $.ajax({
+
+        url: '',
+        type: 'put',
+        dataType: 'json',
+        data: $("#userForm").serializeArray();
+        success: function(response){
+            
+        }
+    });
+
+});
+
+
+
+</script>
+
+
+
+
 @endsection
