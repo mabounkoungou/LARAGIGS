@@ -10,26 +10,29 @@
       <!-- Left -->
   
       <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+      <!-- Right -->
+<div>
+  <a href="https://www.facebook.com/your-facebook-page" class="me-4 text-reset">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://twitter.com/your-twitter-account" class="me-4 text-reset">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="https://plus.google.com/your-google-page" class="me-4 text-reset">
+    <i class="fab fa-google"></i>
+  </a>
+  <a href="https://www.instagram.com/your-instagram-account" class="me-4 text-reset">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/your-linkedin-profile" class="me-4 text-reset">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/your-github-profile" class="me-4 text-reset">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<!-- Right -->
+
       <!-- Right -->
     </section>
     <!-- Section: Social media -->
