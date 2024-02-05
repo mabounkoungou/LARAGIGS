@@ -8,9 +8,34 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-8">
-                <h1>Find your dream job</h1>
-                <p>Thounsands of jobs available.</p>
-                <div class="banner-btn mt-5"><a href="#" class="btn btn-primary mb-4 mb-sm-0">Explore Now</a></div>
+                <div class="typing-text">
+                    <h1 id="jobTitle">Find your dream job</h1>
+                    <h3 id="jobDescription">Thousands of jobs available.</h3>
+                  </div>
+                
+                  <script>
+                    const insights = [
+                      { title: "Exciting Opportunities", description: "Explore a variety of exciting job opportunities in your field." },
+                      { title: "Career Growth", description: "Unlock pathways for career growth and professional development." },
+                      { title: "Work-Life Balance", description: "Discover jobs that offer a healthy work-life balance for optimal well-being." },
+                      // Add more insights as needed
+                    ];
+                
+                    let index = 0;
+                
+                    function typeText() {
+                      const titleElement = document.getElementById('jobTitle');
+                      const descriptionElement = document.getElementById('jobDescription');
+                
+                      titleElement.innerHTML = insights[index].title;
+                      descriptionElement.innerHTML = insights[index].description;
+                
+                      index = (index + 1) % insights.length;
+                    }
+                
+                    setInterval(typeText, 5000); // Change the interval duration (in milliseconds) as needed
+                    typeText(); // Initial call
+                  </script>                <div class="banner-btn mt-5"><a href="#" class="btn btn-primary mb-4 mb-sm-0">Explore Now</a></div>
             </div>
         </div>
     </div>

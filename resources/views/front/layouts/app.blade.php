@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}" />
 	<!-- Fav Icon -->
+	
 	<link rel="shortcut icon" type="image/x-icon" href="#" />
 	<style>
 		.btn.btn-outline-primary.me-2 {
@@ -25,7 +26,42 @@
     margin: 0 auto;
 }
 
+body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
 
+    h1, h3 {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .typing-text h1,
+    .typing-text h3 {
+      border-right: 2px solid #000;
+      font-size: 24px;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      0%, 100% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #000;
+      }
+    }
 
 
 	</style>
@@ -41,7 +77,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="index.html">Home</a>
+						<a class="nav-link" aria-current="page" href="{{route('account.authenticate')}}">Home</a>
 					</li>	
 					<li class="nav-item">
 						<a class="nav-link" aria-current="page" href="jobs.html">Find Jobs</a>
