@@ -15,11 +15,17 @@
                 
                   <script>
                     const insights = [
-                      { title: "Exciting Opportunities", description: "Explore a variety of exciting job opportunities in your field." },
-                      { title: "Career Growth", description: "Unlock pathways for career growth and professional development." },
-                      { title: "Work-Life Balance", description: "Discover jobs that offer a healthy work-life balance for optimal well-being." },
-                      // Add more insights as needed
-                    ];
+  { title: "Exciting Opportunities", description: "Explore a variety of exciting job opportunities in your field." },
+  { title: "Career Growth", description: "Unlock pathways for career growth and professional development." },
+  { title: "Work-Life Balance", description: "Discover jobs that offer a healthy work-life balance for optimal well-being." },
+  { title: "Innovative Work Environment", description: "Join a workplace that fosters innovation and creativity." },
+  { title: "Competitive Compensation", description: "Access competitive salary packages and attractive benefits." },
+  { title: "Flexible Schedules", description: "Enjoy flexibility in your work schedule to accommodate personal needs." },
+  { title: "Global Opportunities", description: "Explore job opportunities with global reach and diverse experiences." },
+  { title: "Collaborative Team Culture", description: "Be part of a collaborative team culture that values teamwork and cooperation." },
+  { title: "Cutting-Edge Technology", description: "Work with the latest and cutting-edge technologies in your field." },
+  { title: "Mentorship Programs", description: "Benefit from mentorship programs for professional guidance and support." },
+];
                 
                     let index = 0;
                 
