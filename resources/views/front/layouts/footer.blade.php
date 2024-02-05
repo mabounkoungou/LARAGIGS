@@ -1,5 +1,6 @@
-<!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
@@ -114,7 +115,10 @@
   
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        <p>&copy; {{ \Carbon\Carbon::now()->format('Y') }} Copyright:</p>
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © {{ date('Y') }} Copyright:
+    </div>
+      <a class="text-reset fw-bold" href="#">LARA-GIGS</a>
     </div>
     <!-- Copyright -->
   </footer>
